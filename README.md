@@ -1,2 +1,2 @@
-# daily-planner
-Daily Planner
+# work-planner
+Work Planner
