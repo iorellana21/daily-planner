@@ -24,8 +24,13 @@ body {
   font-weight: bold;
 }
 
-.btn{
-  padding: 10px 30px;
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+.description{
+  white-space: pre-wrap;
 }
 
 .textarea{
@@ -37,13 +42,8 @@ body {
   margin: 18px 35px;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.description{
-  white-space: pre-wrap;
+.btn{
+  padding: 10px 30px;
 }
 
 .past {

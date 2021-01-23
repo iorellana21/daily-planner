@@ -5,14 +5,14 @@ var todayDate = today.toDateString();
 // add todays date to page to display
 $("#currentDay").text(todayDate);
 
-// display current hour
+// assign/display current hour
 var currentHour = new Date().getHours();
 console.log("current hour: " + currentHour);
 
-// selecting all tags with value attribute
-var rows = document.querySelectorAll("value");
+// selecting all row tags with value attribute
+var rows = document.querySelectorAll("[value]");
 
-// creating object with each hour as a key
+// creating object with each hour as a key for local storage
 var timeEntry = {
     9: "",
     10: "",
@@ -25,15 +25,15 @@ var timeEntry = {
     17: ""
 }
 
-// update timeEntry oject with the stored values from local storage
+// assign timeEntry object values with the stored values from local storage
 Object.assign(timeEntry, JSON.parse(localStorage.getItem(`${todayDate}`)));
 
-// Assign different colors to different times
+// assign different colors to different time after comparing with current hour
 rows.forEach(function (rowElement) {
-    // grabbing the value for each row
-    var rowHour = parseInt(rowElement.getAttribute("[value]"));
+    // grabbing the value attribute for each row
+    var rowHour = parseInt(rowElement.getAttribute("value"));
 
-    // assign the value of row into the input tag value
+    // assign the value attribute of row into the input tag value
     rowElement.querySelector("input").value = timeEntry[rowHour];
 
     // compare hour of row and current hour
@@ -51,15 +51,15 @@ rows.forEach(function (rowElement) {
     }
 });
 
-// Add event handler to save event info
+// what happens when a Save button is clicked
 $(".btn").click(function (event) {
-    // display what button was pressed and id of button
-    console.log(event.currentTarget);
+    // display id of button pressed
+    console.log(event.currentTarget.id);
 
     // get parent element of button pressed
     var parentValue = $(this).parent();
 
-    // pull in value of parent row element and assign to hourValue
+    // pull in/display value attribute of parent row element and assign to hourValue
     var hourValue = parseInt(parentValue.attr("value"));
     console.log("hour value of parent element: " + hourValue);
 
