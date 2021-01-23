@@ -23,7 +23,7 @@ Depending on users current time, each time block will display one of three color
     1. Data entered are displayed back onto the page
 
 ## Main Page
-![alt text](https://raw.githubusercontent.com/iorellana21/work-planner/main/assets/work-planner.png "work-planner")
+![alt text](pic "work-planner")
 
 ---
 ## Credits
