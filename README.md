@@ -8,6 +8,7 @@ If the current hour is equal to a timeslot, that will appear in red.
 
 ## What Was Done
 * Modify HTML page and create time blocks
+* Modify CSS page
 * Build JS page for color-coding rows and saving/retrieving data
 * Use localStorage
 

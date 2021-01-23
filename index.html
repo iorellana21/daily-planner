@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -19,77 +22,96 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <!-- Timeblocks go here -->
     <div class="container">
-      <!-- Timeblocks containing time rows -->
-      <!-- Time rows contain time, text, button -->
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="9" value="9">
-            <div class="col--md-1 ">9AM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-9" data-time="9"></textarea>
-            <button class ="btn btn-info" type="button" id="9">Save</button>
-          </div>
+      <!-- 9am -->
+      <div class="row time-block" value="9">
+        <div class="col-2 hour">9AM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-9">
+        </div>
+        <button class="btn btn-info" type="button" id="9">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="10" value="10">
-            <div class="col--md-1 ">10AM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-10" data-time="10"></textarea>
-            <button class="btn btn-info" type="button" id="10">Save</button>
-          </div>
+      <!-- 10am -->
+      <div class="row time-block" value="10">
+        <div class="col-2 hour">10AM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-10">
+        </div>
+        <button class="btn btn-info" type="button" id="10">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="11" value="11">
-            <div class="col--md-1 ">11AM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-11" data-time="11"></textarea>
-            <button class="btn btn-info" type="button" id="11">Save</button>
-          </div>
+      <!-- 11am -->
+      <div class="row time-block" value="11">
+        <div class="col-2 hour">11AM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-11">
+        </div>
+        <button class="btn btn-info" type="button" id="11">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="12" value="12">
-            <div class="col--md-1 ">12PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-12" data-time="12"></textarea>
-            <button class="btn btn-info" type="button" id="12">Save</button>
-          </div>
+      <!-- 12pm -->
+      <div class="row time-block" value="12">
+        <div class="col-2 hour">12PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-12">
+        </div>
+        <button class="btn btn-info" type="button" id="12">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="1" value="13">
-            <div class="col--md-1 ">1PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-13" data-time="13"></textarea>
-            <button class="btn btn-info" type="button" id="13">Save</button>
-          </div>
+      <!-- 1pm -->
+      <div class="row time-block" value="13">
+        <div class="col-2 hour">1PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-13">
+        </div>
+        <button class="btn btn-info" type="button" id="13">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="2" value="14">
-            <div class="col--md-1 ">2PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-14" data-time="14"></textarea>
-            <button class="btn btn-info" type="button" id="14">Save</button>
-          </div>
+      <!-- 2pm -->
+      <div class="row time-block" value="14">
+        <div class="col-2 hour">2PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-14">
+        </div>
+        <button class="btn btn-info" type="button" id="14">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="3" value="15">
-            <div class="col--md-1 ">3PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-15" data-time="15"></textarea>
-            <button class="btn btn-info" type="button" id="15">Save</button>
-          </div>
+      <!-- 3pm -->
+      <div class="row time-block" value="15">
+        <div class="col-2 hour">3PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-15">
+        </div>
+        <button class="btn btn-info" type="button" id="15">Save</button>
+      </div>
 
-          <!-- 9am Timeblock -->
-          <div class="row mb-3" id="4" value="16">
-            <div class="col--md-1 ">4PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-16" data-time="16"></textarea>
-            <button class="btn btn-info" type="button" id="16">Save</button>
-          </div>
+      <!-- 4pm -->
+      <div class="row time-block" value="16">
+        <div class="col-2 hour">4PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-16">
+        </div>
+        <button class="btn btn-info" type="button" id="16">Save</button>
+      </div>
 
-          <!-- 5pm Timeblock -->
-          <div class="row mb-3" id="5" value="17">
-            <div class="col--md-1 ">5PM</div>
-            <textarea class="description form-control col-md-10" type="text" id="input-17" data-time="17"></textarea>
-            <button class="btn btn-info" type="button" id="17">Save</button>
-          </div>
+      <!-- 5pm -->
+      <div class="row time-block" value="17">
+        <div class="col-2 hour">5PM</div>
+        <div class="col-8">
+          <input class="description textarea form-control col-10" type="text" placeholder="Task" id="input-17">
+        </div>
+        <button class="btn btn-info" type="button" id="17">Save</button>
+      </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
+
   </body>
 
 </html>
