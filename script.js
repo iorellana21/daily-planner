@@ -5,72 +5,42 @@ var todayDate = today.toDateString();
 // add text to page to display
 $("#currentDay").text(todayDate);
 
-// create an array to contain hours
-var hours = [
-    "9am",
-    "10am",
-    "11am",
-    "12pm",
-    "1pm",
-    "2pm",
-    "3pm",
-    "4pm",
-    "5pm",
-];
-
-// for-loop to create timeblocks for each value in hours array
-for (var i = 0; i < hours.length; i++) {
-    // displaying working hours
-    console.log(hours[i]);
-
-    // create div tag to contain entire timeblock for each hour
-    var timeBlockTag = $("<div>");
-    // assign the row class
-    $(timeBlockTag).addClass("row");
 
 
-    // create h2 tag to display hour
-    var hourTag = $("<h2>");
-    // assign the hour class
-    $(hourTag).addClass("hour");
-    // add text to display hours in array
-    $(hourTag).text(hours[i]);
+// create an array and check if there is data in the 'users' key in localStorage
+// if true, expand the array and add another index; else, create first index
+var userArray = JSON.parse(localStorage.getItem(`${todayDate}`)) || [];
 
+// what happens when Save button is clicked
+$("button").on("click", function (event) {
+    // display button pressed
+    console.log(event.currentTarget);
+    // assign id of button pressed to hour variable
+    var hour = event.currentTarget.id;
+    // display id of button pressed
+    console.log("variable hour: " + hour);
 
+    // using hour variable, search for id of textarea tag and store value into variable
+    var userInput = $("#input-" + hour).val();
+    // display user input
+    console.log("task entered: " + userInput);
 
-    // create textarea tag to contain user input
-    var textTag = $("<textarea>");
-    // assign the description and time-block classes
-    $(textTag).addClass("description");
-    $(textTag).addClass("time-block");
+    // concatenate hour and task
+    console.log("hour: " + hour + "; task: " + userInput);
 
-    
-    // create textarea tag to display save button
-    var buttonTag = $("<button>");
-    $(buttonTag).addClass("saveBtn");
+    // assign value to userInitials variable
+    // userInitials = userInput.value; this is my userInput variable
 
+    // object containing hour and task
+    var user = {
+        time: hour,
+        task: userInput
+    };
 
+    // push values from user object to array
+    userArray.push(user);
 
+    // store array data as an item inside todayDate key
+    localStorage.setItem(`${todayDate}`, JSON.stringify(userArray));
 
-
-
-
-
-
-
-
-
-
-
-    // append timeBlockTag to .container
-    $(".container").append(timeBlockTag);
-    // append hour, text, button tags to timeBlockTag
-    $(timeBlockTag).append(hourTag);
-    $(timeBlockTag).append(textTag);
-    $(timeBlockTag).append(buttonTag);
-
-
-
-
-    
-}
+});
