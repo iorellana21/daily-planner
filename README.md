@@ -21,16 +21,7 @@ User can go to page and enter in tasks for working hours.
         * if user chooses incorrect, score does not increase, timer is deducted by 5 seconds
 
 ## Main Page
-![alt text](https://raw.githubusercontent.com/iorellana21/code-quiz/main/assets/code-quiz-main-page.png "code-quiz-main-page")
-
-## Questions Page
-![alt text](https://raw.githubusercontent.com/iorellana21/code-quiz/main/assets/Question.png "code-quiz-question-page")
-
-## User initials Page
-![alt text](https://raw.githubusercontent.com/iorellana21/code-quiz/main/assets/userInitials.png "code-quiz-initials-page")
-## Score Page
-![alt text](https://raw.githubusercontent.com/iorellana21/code-quiz/main/assets/scores.png "code-quiz-score-page")
-
+![alt text](https://raw.githubusercontent.com/iorellana21/work-planner/main/assets/work-planner.png "work-planner")
 
 ---
 ## Credits
