@@ -30,6 +30,7 @@ Depending on users current time, each time block will display one of three color
 * [Stack Overflow](https://stackoverflow.com/)
 * [W3Schools](https://www.w3schools.com/)
 * [Google](https://www.google.com/)
+* Tutoring/Classmates
 
 ---
 ## Links
