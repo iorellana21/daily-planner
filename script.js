@@ -2,7 +2,7 @@
 var today = new Date();
 // create variable to contain Day Month ## Year format
 var todayDate = today.toDateString();
-// add text to page to display
+// add todays date to page to display
 $("#currentDay").text(todayDate);
 
 // display current hour
@@ -10,7 +10,7 @@ var currentHour = new Date().getHours();
 console.log("current hour: " + currentHour);
 
 // selecting all tags with value attribute
-var rows = document.querySelectorAll("[value]");
+var rows = document.querySelectorAll("value");
 
 // creating object with each hour as a key
 var timeEntry = {
@@ -25,15 +25,13 @@ var timeEntry = {
     17: ""
 }
 
-//update timeEntry oject with the stored values from local storage
+// update timeEntry oject with the stored values from local storage
 Object.assign(timeEntry, JSON.parse(localStorage.getItem(`${todayDate}`)));
 
 // Assign different colors to different times
 rows.forEach(function (rowElement) {
     // grabbing the value for each row
-    var rowHour = parseInt(rowElement.getAttribute("value"));
-    // display value for row
-    console.log(rowHour);
+    var rowHour = parseInt(rowElement.getAttribute("[value]"));
 
     // assign the value of row into the input tag value
     rowElement.querySelector("input").value = timeEntry[rowHour];
@@ -51,38 +49,12 @@ rows.forEach(function (rowElement) {
     } else {
         $(rowElement).addClass("present");
     }
-
-    // el.querySelector(".seg").className += " present";
 });
-
-// going through all rows and applying color based on the rows hourValue
-// for (var i = 0; i < rows.length; i++) {
-//     // display value for each row
-//     // var hourValue = parseInt(rows[i].getAttribute("value"));
-//     // console.log("row " + rows[i].getAttribute("value") + " hour value variable - " + hourValue);
-
-//     // compare hour of row and current hour
-//     if (currentHour > hourValue) {
-//         // apply past class to row if current hour is greater than rows hour value
-//         var pastHours = rows[i].setAttribute("class", "past");
-
-//         // apply future class to row if current hour is less than rows hour value
-//     } else if (currentHour < hourValue) {
-//         var futureHours = rows[i].setAttribute("class", "future");
-
-//         // otherwise apply present class
-//     } else {
-//         var presentHour = rows[i].setAttribute("class", "present");
-//     }
-// }
-
-
 
 // Add event handler to save event info
 $(".btn").click(function (event) {
     // display what button was pressed and id of button
     console.log(event.currentTarget);
-    console.log("id of button pressed: " + parseInt(event.currentTarget.id));
 
     // get parent element of button pressed
     var parentValue = $(this).parent();
