@@ -13,12 +13,13 @@ If the current hour is equal to a timeslot, that will appear in red.
 
 ---
 ## Process
-User can go to page and enter in tasks for working hours.
+User can go to page and enter in tasks for the day.
+
+Depending on users current time, each time block will display one of three colors - as listed in <b>Description</b>
 * When a user clicks the Save button:
     1. Time and task entered are saved into local storage
-    2. First question appears, waits for user selection
-        * if user chooses correct, score will increase by 1
-        * if user chooses incorrect, score does not increase, timer is deducted by 5 seconds
+* When a user closed and reopens the page:
+    1. Data entered are displayed back onto the page
 
 ## Main Page
 ![alt text](https://raw.githubusercontent.com/iorellana21/work-planner/main/assets/work-planner.png "work-planner")
@@ -32,6 +33,6 @@ User can go to page and enter in tasks for working hours.
 ---
 ## Links
 #### Live URL
-* https://iorellana21.github.io/code-quiz/
+* https://iorellana21.github.io/work-planner/
 #### GitHub URL
-* https://github.com/iorellana21/code-quiz
+* https://github.com/iorellana21/work-planner
